@@ -33,11 +33,11 @@ cacheSolve <- function(x, ...) {
             # if the inverse is not null (has already been calculated)
             if(!is.null(m))
             {
-              # let's calculate it
+              # let's take it from cache
               message("getting cached data")
               return(m)
             }
-            # otherwise we take it from the cache
+            # otherwise we calculate
             data <- x$getmatrix()
             m <- solve(data, ...)
             #set the value of the inverse
